@@ -22,7 +22,7 @@ const QuizGame: React.FC = () => {
   // Fetch quiz questions from the server using axios and update state variables
   useEffect(() => {
     axios
-      .get("http://localhost:8000/quizs/getQuestions")
+      .get("https://gamesapp.onrender.com/quizs/getQuestions")
       .then((response) => {
         setQuizList(response.data);
         setQueLen(response.data.length);
