@@ -13,8 +13,8 @@ const Routers_2 = require("./Routers");
 const cors_1 = __importDefault(require("cors"));
 const config_1 = require("./config");
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)());
-app.use(cors_1({origin: (process.env.CLIENT_URL || 'http://localhost:3000')}));
+app.use((0, cors_1.default)({origin: (process.env.CLIENT_URL || 'http://localhost:3000')}));
+// app.use(cors_1({origin: (process.env.CLIENT_URL || 'http://localhost:3000')}));
 // define function for connect
 // to the Data Base
 const connectToDb = async () => {
