@@ -60,7 +60,7 @@ const LogIn = () => {
       user_name: username,
       password,
     };
-    const response = axios.post("http://localhost:8000/users/isAdmin", data);
+    const response = axios.post("https://gamesapp.onrender.com/users/isAdmin", data);
     return response;
   };
 
