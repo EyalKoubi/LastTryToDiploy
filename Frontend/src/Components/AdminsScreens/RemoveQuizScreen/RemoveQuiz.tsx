@@ -15,7 +15,7 @@ const RemoveQuiz = (): JSX.Element => {
      * Fetches the quiz data from the API and updates the quizList state.
      */
     axios
-      .get("http://localhost:8000/quizs/getQuestions")
+      .get("https://gamesapp.onrender.com/quizs/getQuestions")
       .then((response: any) => {
         setQuizList(response.data);
       })
