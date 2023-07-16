@@ -24,7 +24,7 @@ const MultipleChoice = ({ from }: any): JSX.Element => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/quizs/getSingleQuestion?question=${from}`)
+      .get(`https://gamesapp.onrender.com/quizs/getSingleQuestion?question=${from}`)
       .then((response) => response.data)
       .then((data) => {
         if (firstAppear) {
@@ -98,7 +98,7 @@ const MultipleChoice = ({ from }: any): JSX.Element => {
    */
   const updating = (toUpdate: object): void => {
     axios
-      .patch(`http://localhost:8000/quizs/update/${ID}`, toUpdate, {
+      .patch(`https://gamesapp.onrender.com/quizs/update/${ID}`, toUpdate, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -108,7 +108,7 @@ const MultipleChoice = ({ from }: any): JSX.Element => {
         console.log("data.question: " + data.question);
         axios
           .get(
-            `http://localhost:8000/quizs/getSingleQuestion?question=${data.question}`
+            `https://gamesapp.onrender.com/quizs/getSingleQuestion?question=${data.question}`
           )
           .then((response) => response.data)
           .then((data) => {
