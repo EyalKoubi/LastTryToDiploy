@@ -17,7 +17,7 @@ const SpecificQuestion = (props: SpecificQuestionProps): JSX.Element => {
    */
   const handleRealRemoveQuiz = (id: number): void => {
     axios
-      .delete(`http://localhost:8000/quizs/delete/${id}`)
+      .delete(`https://gamesapp.onrender.com/quizs/delete/${id}`)
       .then((response) => {
         const data = response.data;
         if (data.success) {
@@ -26,7 +26,7 @@ const SpecificQuestion = (props: SpecificQuestionProps): JSX.Element => {
             element.remove();
           }
           axios
-            .get("http://localhost:8000/quizs/getQuestions")
+            .get("https://gamesapp.onrender.com/quizs/getQuestions")
             .then((response: any) => {
               props.setQuizList(response.data);
             });
