@@ -89,7 +89,7 @@ const AddQuiz = () => {
   const logToAppropriateType = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/quizs/isFound?question=${question}`
+        `https://gamesapp.onrender.com/quizs/isFound?question=${question}`
       );
       const data = response.data;
       if (data === true) {
@@ -107,7 +107,7 @@ const AddQuiz = () => {
           };
 
           const response = await axios.post(
-            "http://localhost:8000/quizs/create",
+            "https://gamesapp.onrender.com/quizs/create",
             data
           );
           console.log("Data posted successfully:", response.data);
