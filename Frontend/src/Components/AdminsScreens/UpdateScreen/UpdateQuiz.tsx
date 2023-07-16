@@ -21,7 +21,7 @@ const UpdateQuiz = () => {
 
   function fetchQuestions() {
     axios
-      .get("http://localhost:8000/quizs/getQuestions")
+      .get("https://gamesapp.onrender.com/quizs/getQuestions")
       .then((response) => {
         setQuestionOptions(
           response.data.map((question: any) => question.question)
@@ -45,7 +45,7 @@ const UpdateQuiz = () => {
     if (notEmpty) {
       setUpdateError(false);
       axios
-        .get(`http://localhost:8000/quizs/isFound?question=${selectedQuestion}`)
+        .get(`https://gamesapp.onrender.com/quizs/isFound?question=${selectedQuestion}`)
         .then((response) => {
           const data = response.data;
           if (data !== true) {
